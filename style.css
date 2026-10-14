@@ -1,0 +1,246 @@
+
+/* ===== GLOBAL STYLES ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fb;
+    color: #273142;
+    line-height: 1.7;
+    padding: 20px;
+}
+
+/* ===== NAVIGATION BAR ===== */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+
+nav a {
+    color: #374151;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* ===== HORIZONTAL LINES ===== */
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 30px 0;
+}
+
+/* ===== HOME SECTION ===== */
+
+#home {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 80px 25px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+}
+
+header h1 {
+    color: #172554;
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 10px;
+}
+
+header h3 {
+    color: #2563eb;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ===== SECTION HEADINGS ===== */
+
+h2 {
+    color: #172554;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #1e40af;
+}
+
+/* ===== PARAGRAPHS ===== */
+
+p {
+    color: #5b6474;
+    margin-bottom: 15px;
+}
+
+/* ===== CONTENT SECTIONS ===== */
+
+section {
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+#about,
+#projects,
+#connect,
+#contact {
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #e8edf4;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: box-shadow 0.3s ease;
+}
+
+#about:hover,
+#projects:hover,
+#connect:hover,
+#contact:hover {
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.08);
+}
+
+/* ===== EDUCATION AND PRE-FORMATTED TEXT ===== */
+
+pre {
+    font-family: inherit;
+    color: #5b6474;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin: 15px 0;
+}
+
+/* ===== LISTS ===== */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 12px 0;
+}
+
+/* ===== PROJECTS ===== */
+
+#projects li {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f8faff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#projects li:hover {
+    transform: translateY(-4px);
+    border-color: #93c5fd;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.08);
+}
+
+#projects li h3 {
+    color: #1d4ed8;
+    margin-bottom: 8px;
+}
+
+/* ===== SOCIAL AND CONTACT LINKS ===== */
+
+#connect a,
+#contact a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    transition: color 0.3s ease;
+}
+
+#connect a:hover,
+#contact a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
+
+/* ===== ANIMATED HOVER EFFECT ===== */
+
+nav a,
+#connect a,
+#contact a {
+    transition: color 0.25s ease;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    nav {
+        gap: 15px;
+        padding: 15px 10px;
+        position: static;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    #home {
+        padding: 55px 15px;
+    }
+
+    header h3 {
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+
+    #about,
+    #projects,
+    #connect,
+    #contact {
+        padding: 22px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
